@@ -1,0 +1,8 @@
+export default {
+      id: "sound-usage",
+      viewBox: "0 0 93.038 93.038",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\sound.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

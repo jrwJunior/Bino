@@ -1,0 +1,8 @@
+export default {
+      id: "play-button-usage",
+      viewBox: "0 0 41.999 41.999",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\play-button.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

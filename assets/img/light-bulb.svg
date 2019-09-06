@@ -1,0 +1,8 @@
+export default {
+      id: "light-bulb-usage",
+      viewBox: "0 0 455.88 455.88",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\light-bulb.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

@@ -1,0 +1,8 @@
+export default {
+      id: "liked-usage",
+      viewBox: "0 0 512 512",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\liked.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

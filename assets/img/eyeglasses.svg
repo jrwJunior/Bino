@@ -1,0 +1,8 @@
+export default {
+      id: "eyeglasses-usage",
+      viewBox: "0 0 60 60",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\eyeglasses.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

@@ -1,0 +1,8 @@
+export default {
+      id: "badge-usage",
+      viewBox: "-96 0 457 457.14286",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\badge.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

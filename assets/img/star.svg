@@ -1,0 +1,8 @@
+export default {
+      id: "star-usage",
+      viewBox: "0 0 490.727 490.727",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\star.svg",
+      toString: function () {
+        return this.url;
+      }
+    }

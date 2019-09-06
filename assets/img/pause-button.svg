@@ -1,0 +1,8 @@
+export default {
+      id: "pause-button-usage",
+      viewBox: "0 0 535.578 535.578",
+      url: "/" + "C:\\Users\\Dick-jon\\Desktop\\site\\src\\sprite\\pause-button.svg",
+      toString: function () {
+        return this.url;
+      }
+    }
