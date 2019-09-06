@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+	<title>Document</title>
+	<style>
+		.spinner {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 6;
+}
+
+.spinner svg {
+  animation: mat-progress-spinner-linear-rotate 2000ms linear infinite;
+}
+
+.spinner circle {
+  fill: transparent;
+  transform-origin: center;
+  transition: stroke-dashoffset 225ms linear;
+  transition-property: stroke;
+  animation-duration: 4000ms;
+  animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+  animation-iteration-count: infinite;
+  stroke: #e74c3c;
+}
+
+@keyframes mat-progress-spinner-linear-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mat-progress-spinner-stroke-rotate-56 {
+  0% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotate(0);
+}
+
+12.5% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotate(0);
+}
+
+12.5001% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotateX(180deg) rotate(72.5deg);
+}
+
+25% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotateX(180deg) rotate(72.5deg);
+}
+
+25.0001% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotate(270deg);
+}
+
+37.5% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotate(270deg);
+}
+
+37.5001% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotateX(180deg) rotate(161.5deg);
+}
+
+50% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotateX(180deg) rotate(161.5deg);
+}
+
+50.0001% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotate(180deg);
+}
+
+62.5% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotate(180deg);
+}
+
+62.5001% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotateX(180deg) rotate(251.5deg);
+}
+
+75% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotateX(180deg) rotate(251.5deg);
+}
+
+75.0001% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotate(90deg);
+}
+
+87.5% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotate(90deg);
+}
+
+87.5001% {
+    stroke-dashoffset: 28.902652413026097;
+    transform: rotateX(180deg) rotate(341.5deg);
+}
+
+100% {
+    stroke-dashoffset: 137.28759896187395;
+    transform: rotateX(180deg) rotate(341.5deg);
+  } 
+}
+	</style>
+	<style>
+		input[type=color]::-webkit-color-swatch {
+			border: none
+		}
+
+		input[type=color]::-webkit-color-swatch-wrapper {
+			padding: 0
+		}
+
+		abbr,
+		address,
+		article,
+		aside,
+		audio,
+		b,
+		blockquote,
+		body,
+		canvas,
+		caption,
+		cite,
+		code,
+		dd,
+		del,
+		details,
+		dfn,
+		div,
+		dl,
+		dt,
+		em,
+		fieldset,
+		figcaption,
+		figure,
+		footer,
+		form,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		header,
+		hgroup,
+		html,
+		i,
+		iframe,
+		img,
+		ins,
+		kbd,
+		label,
+		legend,
+		li,
+		mark,
+		menu,
+		nav,
+		object,
+		ol,
+		p,
+		pre,
+		q,
+		samp,
+		section,
+		small,
+		span,
+		strong,
+		sub,
+		summary,
+		sup,
+		table,
+		tbody,
+		td,
+		tfoot,
+		th,
+		thead,
+		time,
+		tr,
+		ul,
+		var,
+		video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: 0 0;
+			font-weight: inherit
+		}
+
+		body {
+			line-height: 1
+		}
+
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		menu,
+		nav,
+		section {
+			display: block
+		}
+
+		nav ul {
+			list-style: none
+		}
+
+		blockquote,
+		q {
+			quotes: none
+		}
+
+		blockquote:after,
+		blockquote:before,
+		q:after,
+		q:before {
+			content: '';
+			content: none
+		}
+
+		a {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: 0 0
+		}
+
+		ins {
+			background-color: #ff9;
+			color: #000;
+			text-decoration: none
+		}
+
+		mark {
+			background-color: #ff9;
+			color: #000;
+			font-style: italic;
+			font-weight: 700
+		}
+
+		del {
+			text-decoration: line-through
+		}
+
+		abbr[title],
+		dfn[title] {
+			border-bottom: 1px dotted;
+			cursor: help
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		hr {
+			display: block;
+			height: .0625rem;
+			border: 0;
+			border-top: 1px solid #ccc;
+			margin: 1em 0;
+			padding: 0
+		}
+
+		input,
+		select {
+			vertical-align: middle
+		}
+
+		input:focus {
+			outline: 0
+		}
+
+		ol,
+		ul {
+			list-style-type: none
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="spinner" id="loader">
+			<svg focusable="false" preserveAspectRatio="xMidYMid meet" viewBox="0 0 51.6 51.6" style="width: 56px; height: 56px;">
+				<circle cx="50%" cy="50%" r="23" className="ng-star-inserted" style="animation-name: mat-progress-spinner-stroke-rotate-56; stroke-dasharray: 144.513px; stroke-width: 10%"></circle>
+			</svg>
+		</div>
+		<div class="hero-header" id="home">
+
+			<header class="header" id="header">
+				<div class="header-container">
+					<div class="left-side">
+						<a href="/" class="logo-link">
+							<span class="logo-img"></span>
+						</a>
+					</div>
+					<div class="right-side">
+						<div class="hamburger-menu" id="btn-menu">
+							<span class="box-1"></span>
+							<span class="box-2"></span>
+							<span class="box-3"></span>
+						</div>
+						<nav class="navigation" id="menu">
+							<ul class="navigation__list">
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="home">
+										Home
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="about">
+										About Us
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="portfolio">
+										Portfolio
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="pricing">
+										Pricing
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="blog">
+										Blog
+									</a>
+								</li>
+								<li class="navigation__item">
+									<a href="javascript:;" class="navigation-link" data-id="contact">
+										Contact
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+
+			<div class="hero-header__content">
+				<div class="x-container">
+					<div class="slogan">Our Clients Are Our First Priority</div>
+					<h1 class="heading">
+						Welcome to Bino
+					</h1>
+					<div class="wrapper-figure">
+						<span class="separator-figure"></span>
+					</div>
+					<div class="subtitle">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					</div>
+					<div class="buttons">
+						<a href="javascript:;" class="btn btn-theme--orange">Get Started Now</a>
+						<a href="javascript:;" class="btn btn-theme--white">Learn More</a>
+					</div>
+				</div>
+			</div>
+      <div class="platform-icon">
+				<svg class="platform-icon__anchor">
+					<use xlink:href="assets/sprite/sprite.svg#anchor"></use>
+				</svg>
+      </div>
+      <div class="bevels"></div>
+		</div>
+
+    <section class="advantages">
+      <div class="x-container">
+        <ul class="adv">
+          <li class="adv-item">
+						<div class="box">
+							<div class="box__head">
+								<div class="box__picture">
+									<svg class="adv-icon">
+										<use xlink:href="assets/sprite/sprite.svg#eyeglasses"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="box__content">
+								<div class="title">Sleek Design</div>
+								<div class="info">
+									Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+								</div>
+							</div>
+						</div>
+          </li>
+					<li class="adv-item">
+						<div class="box">
+							<div class="box__head">
+								<div class="box__picture">
+									<svg class="adv-icon">
+										<use xlink:href="assets/sprite/sprite.svg#like"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="box__content">
+								<div class="title">Clean Code</div>
+								<div class="info">
+									Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="adv-item">
+						<div class="box">
+							<div class="box__head">
+								<div class="box__picture">
+									<svg class="adv-icon">
+										<use xlink:href="assets/sprite/sprite.svg#light-bulb"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="box__content">
+								<div class="title">Creative Ideas</div>
+								<div class="info">
+									Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="adv-item">
+						<div class="box">
+							<div class="box__head">
+								<div class="box__picture">
+									<svg class="adv-icon">
+										<use xlink:href="assets/sprite/sprite.svg#chat"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="box__content">
+								<div class="title">Free support</div>
+								<div class="info">
+									Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry.
+								</div>
+							</div>
+						</div>
+					</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="history" id="about">
+      <div class="x-container">
+        <div class="history-box">
+          <div class="history-box__promo">
+            <img class="img-responsive" src="assets/img/display.png" alt="display">
+            <div class="media-container">
+              <video class="video-element" id="video" playsinline poster="assets/img/maxresdefault.jpg" preload="none" src="assets/img/Horizon-ZeroDawn.mp4" type="video/mp4"></video>
+              <a class="control" href="javascript:;" role="button" target>
+                <span class="control__title">Control</span>
+              </a>
+              <div class="controls">
+                <div class="vebcam">
+                  <span class="vebcam__video-element" style="opacity: 0;" aria-label="Video"></span>
+                </div>
+                <span class="button-on controls__element" role="button">
+									<span class="play-button__title">Play</span>
+									<svg class="play-button">
+										<use xlink:href="assets/sprite/sprite.svg#play-button"></use>
+									</svg>
+							  </span>
+                <!-- <span class="controls__element button-on" id="buttonSound" role="button">
+									<svg class="sound-button sound-off">
+										<use xlink:href="assets/sprite/sprite.svg#sound"></use>
+									</svg>
+								</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="history-box__content">
+            <div class="wrapper-heading">
+              <h2 class="heading heading--level-2 heading--color-grey">Out History</h2>
+              <span></span>
+            </div>
+            <p class="text content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ip sum has been the industry's standard dummy text ever since the 1500s, when an unk- nown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p class="text content-text">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <a href="javascript:void(0);" class="btn btn-theme--orange btn-font-color--black" role="button">Browse our work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services-box">
+        <div class="service-left alg-txt-right">
+          <div class="wrapper-heading right">
+            <h2 class="heading heading--level-2">Out Services</h2>
+            <span></span>
+          </div>
+          <div class="services-content">
+            <div class="services-content__item">
+              <div class="services-content__item-heading">Web Design</div>
+              <div class="services-content__item-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ip sum has<br> been the industry's standard dummy text ever.</div>
+              <span class="services-content__item-picture design"></span>
+            </div>
+            <div class="services-content__item">
+              <div class="services-content__item-heading">Print Design</div>
+              <div class="services-content__item-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ip sum has been the industry's standard dummy text ever.</div>
+              <span class="services-content__item-picture print"></span>
+            </div>
+            <div class="services-content__item">
+              <div class="services-content__item-heading">Photography</div>
+              <div class="services-content__item-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ip sum has<br> been the industry's standard dummy text ever.</div>
+              <span class="services-content__item-picture photo"></span>
+            </div>
+          </div>
+        </div>
+        <div class="service-right">
+          <figure class="service-image"></figure>
+        </div>
+      </div>
+    </section>
+		<section class="recent-works alg-txt-center" id="portfolio">
+			<div class="x-container">
+				<h2 class="heading heading--level-2 heading--color-grey">Recent Works</h2>
+				<div class="subtitle subtitle--section subtitle--color-grey">It has survived not only five centuries, but also the leap scrambled it to make a type.</div>
+				<div class="wrapper-figure">
+					<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+				</div>
+				<ul class="tab-list">
+					<li class="tab-item is-active" data-id="all">
+						<div class="tab-item__title">All</div>
+					</li>
+					<li class="tab-item" data-id="print">
+						<div class="tab-item__title">Print Design</div>
+					</li>
+					<li class="tab-item" data-id="animation">
+						<div class="tab-item__title">Animation</div>
+					</li>
+					<li class="tab-item" data-id="art">
+						<div class="tab-item__title">Art</div>
+					</li>
+					<li class="tab-item" data-id="web">
+						<div class="tab-item__title">Web Design</div>
+					</li>
+					<li class="tab-item" data-id="photo">
+						<div class="tab-item__title">Photography</div>
+					</li>
+					<li class="tab-item" data-id="video">
+						<div class="tab-item__title">Video</div>
+					</li>
+				</ul>
+			</div>
+			<div class="tile">
+				<div class="tile-item" data-id="web">
+					<figure class="tile-item__img" style="background-image: url(assets/img/1.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="print">
+					<figure class="tile-item__img" style="background-image: url(assets/img/2.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="art">
+					<figure class="tile-item__img" style="background-image: url(assets/img/3.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="animation">
+					<figure class="tile-item__img" style="background-image: url(assets/img/4.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="print">
+					<figure class="tile-item__img" style="background-image: url(assets/img/5.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="video">
+					<figure class="tile-item__img" style="background-image: url(assets/img/6.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="photo">
+					<figure class="tile-item__img" style="background-image: url(assets/img/7.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+				<div class="tile-item" data-id="web">
+					<figure class="tile-item__img" style="background-image: url(assets/img/8.jpg);"></figure>
+					<div class="box-content">
+						<span class="box-content__line"></span>
+						<div class="box-content__title">T-Shirt Design</div>
+						<div class="box-content__direction">art/t-shirt</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="study alg-txt-center">
+			<div class="x-container">
+				<h2 class="heading heading--level-2 heading--color-grey">Case Study</h2>
+				<div class="subtitle subtitle--section subtitle--color-grey">A brief story about how this process works, keep an eye till the end.</div>
+				<div class="wrapper-figure">
+					<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+				</div>
+				<div class="study-box">
+					<div class="swiper-container study-information">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="study-box__content">
+									<div class="study-information__head">
+										<svg>
+											<use xlink:href="assets/sprite/sprite.svg#light-bulb"></use>
+										</svg>
+									</div>
+									<div class="study-information__title">
+										Accumulate creative ideas
+									</div>
+									<div class="study-information__content">
+										Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.
+										<div class="study-btn">
+											<a href="javascript:;" class="btn btn-small btn-theme--orange btn-font-color--black" role="button">Read more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+									<div class="study-box__content">
+										<div class="study-information__head">
+											<svg>
+												<use xlink:href="assets/sprite/sprite.svg#light-bulb"></use>
+											</svg>
+										</div>
+										<div class="study-information__title">
+											Accumulate creative ideas
+										</div>
+										<div class="study-information__content">
+											Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and typesetting let. Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the setting let.
+											<div class="study-btn">
+												<a href="javascript:;" class="btn btn-small btn-theme--orange btn-font-color--black" role="button">Read more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="study-promo">
+						<figure class="study-image"></figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="statistic">
+			<div class="bg-people">
+				<div class="x-container">
+					<ul class="statistics">
+						<li class="statistics-item">
+							<div class="box">
+								<div class="box__head">
+									<svg class="statistics-icon">
+										<use xlink:href="assets/sprite/sprite.svg#like"></use>
+									</svg>
+								</div>
+								<div class="box__content">
+									<div class="statistics-item__number">3891</div>
+									<div class="statistics-item__text">User Favourites</div>
+								</div>
+							</div>
+						</li>
+						<li class="statistics-item">
+							<div class="box">
+								<div class="box__head">
+									<svg class="statistics-icon">
+										<use xlink:href="assets/sprite/sprite.svg#price-tag"></use>
+									</svg>
+								</div>
+								<div class="box__content">
+									<div class="statistics-item__number">281 K</div>
+									<div class="statistics-item__text">Posts Last 24 Hours</div>
+								</div>
+							</div>
+						</li>
+						<li class="statistics-item">
+							<div class="box">
+								<div class="box__head">
+									<svg class="statistics-icon">
+										<use xlink:href="assets/sprite/sprite.svg#liked"></use>
+									</svg>
+								</div>
+								<div class="box__content">
+									<div class="statistics-item__number">618</div>
+									<div class="statistics-item__text">Total Posts</div>
+								</div>
+							</div>
+						</li>
+						<li class="statistics-item">
+							<div class="box">
+								<div class="box__head">
+									<svg class="statistics-icon">
+										<use xlink:href="assets/sprite/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<div class="box__content">
+									<div class="statistics-item__number">178</div>
+									<div class="statistics-item__text">Compaings</div>
+								</div>
+							</div>
+						</li>
+						<li class="statistics-item">
+							<div class="box">
+								<div class="box__head">
+									<svg class="statistics-icon">
+										<use xlink:href="assets/sprite/sprite.svg#badge"></use>
+									</svg>
+								</div>
+								<div class="box__content">
+									<div class="statistics-item__number">285</div>
+									<div class="statistics-item__text">Amazing Features</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="pricing alg-txt-center" id="pricing">
+			<div class="x-container">
+				<h2 class="heading heading--level-2 heading--color-grey">Our Pricing</h2>
+				<div class="subtitle subtitle--section subtitle--color-grey">A 30 days free trial for all. A brief story about how this process works, keep an eye till the end.</div>
+				<div class="wrapper-figure">
+					<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+				</div>
+				<div class="price-list">
+					<div class="homeplan-box">
+						<div class="homeplan-box__head">
+							Starter
+						</div>
+						<div class="homeplan-box__price">
+							<div class="price-num">
+								<svg>
+									<use xlink:href="assets/sprite/sprite.svg#dollar-symbol"></use>
+								</svg>
+									19
+							</div>
+							<span>per month</span>
+						</div>
+						<ul class="homeplan-box-adv">
+							<li class="homeplan-box-adv__item">
+								Competition Analysis Methods
+							</li>
+							<li class="homeplan-box-adv__item">
+								All Ranked URLs
+							</li>
+							<li class="homeplan-box-adv__item">
+								International Support System
+							</li>
+							<li class="homeplan-box-adv__item">
+								Social Media Tracking
+							</li>
+						</ul>
+						<div class="homeplan-box__button">
+							<a href="javascript:void(0);" class="btn btn-homeplan btn-small btn-theme--gray" role="button">Choose plan</a>
+						</div>
+					</div>
+					<div class="homeplan-box">
+						<div class="homeplan-box__head">
+							Premium
+						</div>
+						<div class="homeplan-box__price">
+							<div class="price-num">
+								<svg>
+									<use xlink:href="assets/sprite/sprite.svg#dollar-symbol"></use>
+								</svg>
+									39
+							</div>
+							<span>per month</span>
+						</div>
+						<ul class="homeplan-box-adv">
+							<li class="homeplan-box-adv__item">
+								Competition Analysis Methods
+							</li>
+							<li class="homeplan-box-adv__item">
+								All Ranked URLs
+							</li>
+							<li class="homeplan-box-adv__item">
+								International Support System
+							</li>
+							<li class="homeplan-box-adv__item">
+								Social Media Tracking
+							</li>
+						</ul>
+						<div class="homeplan-box__button">
+							<a href="javascript:void(0);" class="btn btn-homeplan btn-small btn-theme--gray" role="button">Choose plan</a>
+						</div>
+					</div>
+					<div class="homeplan-box">
+						<div class="homeplan-box__head">
+							Bussines
+						</div>
+						<div class="homeplan-box__price">
+							<div class="price-num">
+								<svg>
+									<use xlink:href="assets/sprite/sprite.svg#dollar-symbol"></use>
+								</svg>
+									99
+							</div>
+							<span>per month</span>
+						</div>
+						<ul class="homeplan-box-adv">
+							<li class="homeplan-box-adv__item">
+								Competition Analysis Methods
+							</li>
+							<li class="homeplan-box-adv__item">
+								All Ranked URLs
+							</li>
+							<li class="homeplan-box-adv__item">
+								International Support System
+							</li>
+							<li class="homeplan-box-adv__item">
+								Social Media Tracking
+							</li>
+						</ul>
+						<div class="homeplan-box__button">
+							<a href="javascript:void(0);" class="btn btn-homeplan btn-small btn-theme--gray" role="button">Choose plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="integration alg-txt-center">
+			<ul class="x-container">
+				<h2 class="heading heading--level-2 heading--color-grey">Great Integrations with Others</h2>
+				<div class="subtitle subtitle--section subtitle--color-grey">Suspendisse sed eros mollis, tincidunt felis eget, interdum erat.</br>Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec. </div>
+				<div class="wrapper-figure">
+					<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+				</div>
+				<ul class="partners">
+					<li class="partners-item">
+						<img src="assets/img/OSHA-Logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/affiliations-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/logo_dob.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/bbb-logo-accredited.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/epa-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/dummy-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/type-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/imaginarium-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/random-brand-logo.png" alt="">
+					</li>
+					<li class="partners-item">
+						<img src="assets/img/an-logo.png" alt="">
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="out-blog alg-txt-center" id="blog">
+			<h2 class="heading heading--level-2 heading--color-grey">Out Blog</h2>
+			<div class="subtitle subtitle--section subtitle--color-grey">Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio.</div>
+			<div class="wrapper-figure">
+				<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+			</div>
+			<div class="tile tile-blog">
+				<div class="tile-item">
+					<figure class="tile-item__img" style="background: url('assets/img/11.jpg')"></figure>
+				</div>
+				<div class="tile-item">
+					<div class="box-content box-content-blog">
+						<div class="box-content__direction">art / t-shirt</div>
+						<div class="box-content__title">T-Shirt Design</div>
+						<span class="box-content__line"></span>
+						<p class="box-content__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+						<a href="javascript:;" class="box-content__link">Read More</a>
+						<div class="tile-triangle"></div>
+					</div>
+				</div>
+				<div class="tile-item">
+					<figure class="tile-item__img" style="background: url('assets/img/31.jpg')"></figure>
+				</div>
+				<div class="tile-item">
+					<div class="box-content box-content-blog">
+						<div class="box-content__direction">art / t-shirt</div>
+						<div class="box-content__title">T-Shirt Design</div>
+						<span class="box-content__line"></span>
+						<p class="box-content__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+						<a href="javascript:;" class="box-content__link">Read More</a>
+						<div class="tile-triangle"></div>
+					</div>
+				</div>
+				<div class="tile-item">
+					<div class="box-content box-content-blog">
+						<div class="box-content__direction">art / t-shirt</div>
+						<div class="box-content__title">T-Shirt Design</div>
+						<span class="box-content__line"></span>
+						<p class="box-content__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+						<a href="javascript:;" class="box-content__link">Read More</a>
+						<div class="tile-triangle"></div>
+					</div>
+				</div>
+				<div class="tile-item">
+					<figure class="tile-item__img" style="background: url('assets/img/61.jpg')"></figure>
+				</div>
+				<div class="tile-item">
+					<div class="box-content box-content-blog">
+						<div class="box-content__direction">art / t-shirt</div>
+						<div class="box-content__title">T-Shirt Design</div>
+						<span class="box-content__line"></span>
+						<p class="box-content__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+						<a href="javascript:;" class="box-content__link">Read More</a>
+						<div class="tile-triangle"></div>
+					</div>
+				</div>
+				<div class="tile-item">
+					<figure class="tile-item__img" style="background: url('assets/img/81.jpg')"></figure>
+				</div>
+			</div>
+		</section>
+		<section class="feedback alg-txt-center" id="contact">
+			<div class="x-container">
+				<h2 class="heading heading--level-2 heading--color-grey">Keep in Touch</h2>
+				<div class="subtitle subtitle--section subtitle--color-grey">Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.</div>
+				<div class="wrapper-figure">
+					<span class="separator-figure separator-figure--section separator-figure--color-gray"></span>
+				</div>
+				<div class="feedback-wrapper">
+					<div class="feedback-information">
+						<ul class="info-list">
+							<li class="info-item">
+								<div class="info-tilte">Out Address</div>
+								<div class="info-addr">House #13, Streat road, Sydney</br>
+									2310 Australia
+								</div>
+							</li>
+							<li class="info-item">
+								<div class="info-tilte">Call us</div>
+								<div class="info-tell">+ 880 168 109 1425</div>
+								<div class="info-tell">+ 0216809142</div>
+							</li>
+							<li class="info-item">
+								<div class="info-tilte">Email us</div>
+								<div class="info-email">contactus@email.com</div>
+							</li>
+						</ul>
+					</div>
+					<form class="contact-from" id='form'>
+						<div class="form-fields">
+							<div class="form-field">
+								<input type="text" class="field" name="name" autocomplete="off" placeholder="Name">
+								<span class="field-error"></span>
+							</div>
+							<div class="form-field">
+								<input type="text" class="field" name="email" autocomplete="off" placeholder="Email">
+								<span class="field-error"></span>
+							</div>
+							<div class="form-field">
+								<input type="text" class="field" name="subject" autocomplete="off" placeholder="Subject">
+								<span class="field-error"></span>
+							</div>
+							<div class="form-field">
+								<textarea class="field field-area" name="message" autocomplete="off" placeholder="Message"></textarea>
+								<span class="field-error"></span>
+							</div>
+							<div class="form-button">
+								<button type="submit" class="btn btn-send" id="send">Send Message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="trial alg-txt-center">
+			<div class="bg-trial">
+				<div class="x-container">
+					<h2 class="heading heading--level-2 heading--color-white">Let's Get Started Now. <strong>It's FREE!</strong></h2>
+					<div class="subtitle subtitle--section subtitle--color-white">30 day free trial. Free plan allows up to 2 projects. Pay if you need more. Cancel anytime. No catches.</div>
+					<div class="trial-button">
+						<a href="javascript:;" class="btn btn-theme--orange" role="button">Start Free Trial</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="x-container">
+				<ul class="socials">
+					<li class="socials-item">
+						<a href="javascript:;">
+							<svg class="social-icon">
+								<use xlink:href="assets/sprite/sprite.svg#fb"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="javascript:;">
+							<svg class="social-icon">
+								<use xlink:href="assets/sprite/sprite.svg#tw"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="socials-item">
+						<a href="javascript:;">
+							<svg class="social-icon">
+								<use xlink:href="assets/sprite/sprite.svg#in"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/*
+services
+====================
+*/
+.services-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media only screen and (min-width: 320px) and (max-width: 850px) {
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+  }
+}
+
+.service-left {
+  background: #202020;
+  padding: 150px 80px 142px 0;
+
+  @media only screen and (min-width: 320px) and (max-width: 750px) {
+    padding: 45px 3%;
+  }
+}
+
+.wrapper-heading.right {
+  .heading {
+    padding-left: 0;
+    padding-right: 30px;
+
+    @media only screen and (min-width: 320px) and (max-width: 575px) {
+      padding-right: 15px;
+    }
+  }
+
+  span::before {
+    left: auto;
+    right: 0;
+  }
+}
+
+.services-content__item {
+  position: relative;
+  margin-top: 58px;
+}
+
+.services-content__item-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e74c3c;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.services-content__item-info {
+  font-size: 14px;
+  line-height: 2.15;
+  color: #999;
+}
+
+.services-content__item-picture {
+  position: absolute;
+  top: calc(50% - 64px / 2);
+  right: calc(-80px + (-64px / 2));
+  background: #fff;
+  display: block;
+  width: 64px;
+  height: 64px;
+  padding: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.25);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 850px) {
+    display: none;
+  }
+}
+
+.services-content__item-picture.design {
+  &::after {
+    background: url("../../img/icons/design.png") no-repeat center/contain;
+  }
+}
+
+.services-content__item-picture.print {
+  &::after {
+    background: url("../../img/icons/print.png") no-repeat center/contain;
+  }
+}
+
+.services-content__item-picture.photo {
+  &::after {
+    background: url("../../img/icons/photography.png") no-repeat center/contain;
+  }
+}
+
+.service-image {
+  background: url("../../img/banner/services.jpg") no-repeat center/cover;
+  height: 100%;
+}

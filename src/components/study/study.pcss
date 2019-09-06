@@ -1,0 +1,131 @@
+.study {
+	padding: var(--mdc-section-padding) 0 calc(var(--mdc-section-padding) + 45px) 0;
+
+	@media only screen and (min-width: 320px) and (max-width: 750px) {
+		padding: 45px 0 90px 0;
+	}
+}
+
+.study-box {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(auto, 52%);
+	align-items: center;
+	justify-content: flex-end;
+	height: 565px;
+	margin-top: 78px;
+
+	@media only screen and (min-width: 320px) and (max-width: 600px) {
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 750px) {
+		grid-template-columns: minmax(auto, 65%);
+	}
+}
+
+.swiper-container.study-information {
+	position: absolute;
+	left: 0;
+	width: 54%;
+	padding: 80px 60px 75px 60px;
+	box-shadow: 3px 5px 20px rgba(0,0,0,0.10);
+	background: #fff;
+
+	@media only screen and (min-width: 320px) and (max-width: 600px) {
+		position: relative;
+		width: 100%;
+		padding: 80px 7% 75px 7%;
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 1024px) {
+		padding: 80px 3% 75px 3%;
+		position: absolute;
+		width: 54%;
+	}
+
+	@media only screen and (min-width: 600px) and (max-width: 750px) {
+		width: 63%;
+	}
+}
+
+.study-box__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.swiper-container .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+}
+
+.swiper-container .swiper-pagination-bullet-active {
+	background: #e74c3c;
+}
+
+.study-information__head {
+	position: relative;
+	width: 90px;
+	height: 90px;
+	background: #e74c3c;
+	transform: rotate(-45deg);
+
+	svg {
+		position: absolute;
+    top: calc(50% - 15px);
+    left: -2px;
+		fill: #fff;
+		width: 100%;
+		height: 36px;
+		transform: rotate(45deg);
+	}
+}
+
+.study-information__title {
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--mdc-theme-title-dark);
+	display: inline-block;
+	margin-top: calc(55px + 12px);
+
+	&:after {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 1px;
+		margin: 15px auto 15px;
+		background: #888;
+	}
+}
+
+.study-information__content {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #999;
+	margin-top: 5px;
+}
+
+.study-btn {
+	margin-top: 48px;
+}
+
+.study-promo {
+	height: calc(100% + 90px);
+
+	@media only screen and (min-width: 320px) and (max-width: 600px) {
+		display: none;
+	}
+}
+
+.study-image {
+	background: url('../../img/banner/study.jpg') no-repeat center/cover;
+	height: 100%;
+}
+
+.study-box .swiper-pagination.swiper-pagination-bullets {
+	bottom: 26px;
+}

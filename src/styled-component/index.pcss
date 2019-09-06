@@ -1,0 +1,52 @@
+@import "fonts.pcss";
+@import "theme.pcss";
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  direction: ltr;
+  color: #999;
+  overflow-x: hidden;
+}
+
+.x-container {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.alg-txt-center {
+  text-align: center;
+}
+
+.alg-txt-right {
+  text-align: right;
+}

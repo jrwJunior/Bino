@@ -1,0 +1,131 @@
+/*
+button
+====================
+*/
+.btn {
+  position: relative;
+  font-size: 14px;
+  line-height: 55px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: transparent;
+  display: inline-block;
+  min-width: 225px;
+  height: 55px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: color 0.15s;
+  z-index: 1;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-send {
+  font-family: inherit;
+  line-height: 45px;
+  min-width: auto;
+  height: 45px;
+  padding: 0 25px;
+  letter-spacing: 0;
+
+  &:enabled {
+    background: #e74c3c;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background: #cecece;
+    cursor: default;
+  }
+}
+
+.btn-homeplan {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-small {
+  min-width: auto;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 32px;
+}
+
+.btn-theme--orange,
+.btn-theme--white {
+  background: transparent;
+  border: 1px solid #e74c3c;
+
+  &::after {
+    content: "";
+    display: block;
+    background: #e74c3c;
+    position: absolute;
+    height: 100%;
+    left: -50%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.4s;
+    transform-origin: top left;
+    width: 150%;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::after {
+      width: 0;
+    }
+
+    background: transparent;
+  }
+}
+
+.btn-theme--orange.btn-font-color--black {
+  &:hover {
+    color: #323232;
+  }
+}
+
+.btn-theme--white {
+  border: 1px solid #fff;
+  color: #323232;
+
+  &::after {
+    background: #fff;
+  }
+
+  &:hover {
+    &::after {
+      width: 0;
+    }
+
+    background: transparent;
+    color: #fff;
+  }
+}
+
+.btn-theme--gray {
+  background: #999;
+
+  &:hover {
+    background: #e74c3c;
+  }
+}
+
+.buttons:last-child .btn {
+  margin-left: 30px;
+
+  @media only screen and (min-width: 320px) and (max-width: 650px) {
+    margin-left: 0;
+  }
+}
